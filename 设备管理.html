@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8"> 
+    <title>设备管理</title>
+    <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/select2.css">
+     <link rel="stylesheet" type="text/css" href="css/manager.css">
+     <link rel="stylesheet" type="text/css" href="css/machine.css">
+      <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
+    <script src="https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    
+    </style>
+</head>
+<body>
+	 <div class="main">
+	 	 <div style="width:100%;height:5px"></div>
+		      <h4>设备管理
+		      	<span class='catalog'><a href="javascript:;">首页&nbsp;</a><b> <span>></span>&nbsp; 系统配置与管理&nbsp; </b><b> <span>></span> &nbsp;设备管理</b></span>
+		      </h4>
+		      <!-- 头部信息 -->
+
+	      <div class="content">
+	      	  <div>
+	      	  	  <div class="row" margin-bottom:>
+	      	  	  	<div class="col-md-3">
+	      	  	  		<label>设备名称:</label>
+	      	  	  		<input id="orgNameInput" style="width:190px;" value="" class="theInput" type="text">
+	      	  	  	</div>
+	      	  	  	<div class="col-md-3">
+	      	  	  		<label>需求响应措施:</label>
+	      	  	  		<!-- <div style="width:190px;height:30px" class="theInput clickInput"></div> -->
+	      	  	  		 <select class="select_gallery-multiple" multiple="multiple" style="width:190px;height:30px;overflow:hidden">  
+                                      <optgroup >  
+                                          <option value="0">分时电价</option>  
+                                          <option value="01">实时电价</option>  
+                                          <option value="02">尖峰电价</option>  
+                                          <option value="03">需求侧电价</option>  
+                                           <option value="04">直接负荷控制</option>  
+                                          <option value="05">可中断负荷</option> 
+                                          <option value="06">紧急需求响应</option>  
+                                          <option value="07">容量/辅助服务计划</option>   
+                                      </optgroup>  
+                                     
+                         </select>  
+	      	  	  	</div>
+	      	  	  	<div class="col-md-3">
+	      	  	  		<label>设备类型:</label>
+	      	  	  		<select class="select_gallery-multiple" multiple="multiple" style="width:190px;height:30px;overflow:hidden">  
+                                      <optgroup >  
+                                          <option value="0">照明设备</option>  
+                                          <option value="01">空调与通风设备</option>  
+                                          <option value="02">动力设备（吊车/搅拌机/水泵/风机/电梯等）</option>  
+                                          <option value="03">水暖设备（热水器等）</option>  
+                                           <option value="04">其他设备</option>  
+                                           
+                                      </optgroup>  
+                                     
+                         </select>  
+	      	  	  	</div>
+	      	  	  </div>
+	      	  	  <div class="row"  style="margin-bottom:20px">
+	      	  	  		<div class="col-md-3">
+	      	  	  			<label>报装容量:</label>
+	      	  	  			<input id="orgNameInput" style="width:190px;" value="" class="theInput" type="text">
+	      	  	  		</div>
+	      	  	  		<div class="col-md-3">
+	      	  	  			<label>需求响应类型:</label>
+	      	  	  			<select class="select_gallery-multiple" multiple="multiple" style="width:190px;height:30px;overflow:hidden">  
+                                      <optgroup >  
+                                          <option value="0">基于电价</option>  
+                                          <option value="01">基于激励</option>  
+                                     
+                                     </optgroup>       
+                                      
+                                     
+                         </select>  
+	      	  	  		</div>
+	      	  	  		<div class="col-md-3">
+	      	  	  			<button class="btn">查询</button>
+	      	  	  			<button class="btn windowBtn">添加</button>
+	      	  	  			<button class="btn">删除</button>
+	      	  	  		</div>
+	      	  	  		<div class="col-md-3" style="text-align:right;margin-bottom:20px">
+	      	  	  			<button class="btn btnRight btn1"></button>
+	      	  	  			<button class="btn btnRight btn2"></button>
+	      	  	  		</div>
+	      	  	  </div>
+	      	  	  <div class="firstDiv">
+	      	  	  		<div class="col-md-4">
+	      	  	  			<div class="box">
+	      	  	  				<div class="boxHeader">
+	      	  	  					<h3 class="boxTitle">中央空调||</h3>
+	      	  	  					<h5 class="boxText">一般工商业用电设备</h5>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxImg">
+	      	  	  					<span class='imgBox'></span>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxFooter">
+	      	  	  					<div class="row">
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>600</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>设备容量</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>200</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>可削减负荷</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>240</span><span>min</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>通知时间</span>
+	      	  	  							</div>
+	      	  	  						</div>
+	      	  	  					</div>
+	      	  	  				</div>
+	      	  	  			</div>
+	      	  	  		</div>
+	      	  	  		<div class="col-md-4">
+	      	  	  			<div class="box">
+	      	  	  				<div class="boxHeader">
+	      	  	  					<h3 class="boxTitle">中央空调|</h3>
+	      	  	  					<h5 class="boxText">一般工商业用电设备</h5>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxImg">
+	      	  	  					<span class='imgBox'></span>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxFooter">
+	      	  	  					<div class="row">
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>500</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>设备容量</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>180</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>可削减负荷</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>240</span><span>min</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>通知时间</span>
+	      	  	  							</div>
+	      	  	  						</div>
+	      	  	  					</div>
+	      	  	  				</div>
+	      	  	  			</div>
+	      	  	  		</div>
+	      	  	  		<div class="col-md-4">
+	      	  	  			<div class="box">
+	      	  	  				<div class="boxHeader">
+	      	  	  					<h3 class="boxTitle">智能空调</h3>
+	      	  	  					<h5 class="boxText">一般工商业用电设备</h5>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxImg">
+	      	  	  					<span class='imgBox'></span>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxFooter">
+	      	  	  					<div class="row">
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>480</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>设备容量</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>200</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>可削减负荷</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>240</span><span>min</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>通知时间</span>
+	      	  	  							</div>
+	      	  	  						</div>
+	      	  	  					</div>
+	      	  	  				</div>
+	      	  	  			</div>
+	      	  	  		</div>
+	      	  	  		<div class="col-md-4">
+	      	  	  			<div class="box">
+	      	  	  				<div class="boxHeader">
+	      	  	  					<h3 class="boxTitle">商场照明</h3>
+	      	  	  					<h5 class="boxText">一般工商业用电设备</h5>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxImg">
+	      	  	  					<span class='imgBox lightImg'></span>
+	      	  	  				</div>
+
+	      	  	  				<div class="boxFooter">
+	      	  	  					<div class="row">
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>400</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>设备容量</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>80</span><span>kW</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>可削减负荷</span>
+	      	  	  							</div>
+	      	  	  						</div>
+
+	      	  	  						<div class="col-sm-4">
+	      	  	  							<div class="theDatas">
+	      	  	  								<h5 class="datasHeader">
+	      	  	  									<span>240</span><span>min</span>
+	      	  	  									
+	      	  	  								</h5>
+	      	  	  								<span class='dataText'>通知时间</span>
+	      	  	  							</div>
+	      	  	  						</div>
+	      	  	  					</div>
+	      	  	  				</div>
+	      	  	  			</div>
+	      	  	  		</div>
+	      	  	  </div>
+
+	      	  	  <div class="rctTable secondDiv" style="overflow:hidden">
+	      	  	  		<div class="bodyContainer">
+	      	  	  	
+	      	  	  			<table class="tableBody" style="border-collapse:collapse;border:none"> 
+	      	  	  				<thead >
+	      	  	  					<tr>
+	      	  	  						<th>
+	      	  	  							<input type="checkbox" class="data-check">
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>设备名称</span><i class="arrow-up"></i><i class="arrow-down"></i>
+	      	  	  						</th>
+	      	  	  						<th>
+	      	  	  							<span>设备领域</span>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>设备类型</span><i class="arrow-up"></i><i class="arrow-down"></i>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>电网公司编号</span><i class="arrow-up"></i><i class="arrow-down" ></i>
+	      	  	  						</th>
+	      	  	  						<th>
+	      	  	  							<span>需求响应类型</span>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>需求响应措施</span><i class="arrow-up"></i><i class="arrow-down" ></i>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>设备容量</span><i class="arrow-up"></i><i class="arrow-down" ></i>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>可调节负荷</span><i class="arrow-up"></i><i class="arrow-down" ></i>
+	      	  	  						</th>
+	      	  	  						<th style="cursor:pointer;">
+	      	  	  							<span>通知时间</span><i class="arrow-up"></i><i class="arrow-down" ></i>
+	      	  	  						</th>
+	      	  	  					</tr>
+	      	  	  				</thead>
+	      	  	  				<tbody>
+	      	  	  					<tr>
+	      	  	  						<td class="td-checkbox">
+	      	  	  							<input type="checkbox">
+	      	  	  						</td>
+	      	  	  						<td>中央空调II</td>
+	      	  	  						<td >一般工商业用电设备</td>
+	      	  	  						<td>空调与通风设备(制冷)</td>
+	      	  	  						<td>3400002</td>
+	      	  	  						<td>基于激励,基于电价</td>
+	      	  	  						<td>分时电价,实时电价,尖峰电价,需求侧竞价</td>
+	      	  	  						<td>600</td>
+	      	  	  						<td>200</td>
+	      	  	  						<td>240</td>
+	      	  	  					</tr>
+	      	  	  					<tr>
+	      	  	  						<td class="td-checkbox">
+	      	  	  							<input type="checkbox">
+	      	  	  						</td>
+	      	  	  						<td>中央空调I</td>
+	      	  	  						<td >一般工商业用电设备</td>
+	      	  	  						<td>空调与通风设备(制冷)</td>
+	      	  	  						<td>3400001</td>
+	      	  	  						<td>基于激励,基于电价</td>
+	      	  	  						<td>分时电价,实时电价,尖峰电价,需求侧竞价</td>
+	      	  	  						<td>500</td>
+	      	  	  						<td>180</td>
+	      	  	  						<td>240</td>
+	      	  	  					</tr>
+	      	  	  					<tr>
+	      	  	  						<td class="td-checkbox">
+	      	  	  							<input type="checkbox">
+	      	  	  						</td>
+	      	  	  						<td>智能空调</td>
+	      	  	  						<td >一般工商业用电设备</td>
+	      	  	  						<td>空调与通风设备(制冷)</td>
+	      	  	  						<td>3400004</td>
+	      	  	  						<td>基于激励,基于电价</td>
+	      	  	  						<td>分时电价,实时电价,尖峰电价,需求侧竞价</td>
+	      	  	  						<td>480</td>
+	      	  	  						<td>200</td>
+	      	  	  						<td>240</td>
+	      	  	  					</tr>
+	      	  	  					<tr>
+	      	  	  						<td class="td-checkbox">
+	      	  	  							<input type="checkbox">
+	      	  	  						</td>
+	      	  	  						<td>商业照明</td>
+	      	  	  						<td >一般工商业用电设备</td>
+	      	  	  						<td>空调与通风设备(制冷)</td>
+	      	  	  						<td>3400003</td>
+	      	  	  						<td>基于激励,基于电价</td>
+	      	  	  						<td>分时电价,实时电价,尖峰电价,需求侧竞价</td>
+	      	  	  						<td>480</td>
+	      	  	  						<td>200</td>
+	      	  	  						<td>240</td>
+	      	  	  					</tr>
+	      	  	  				</tbody>
+							</table>
+	      	  	  		</div>
+	      	  	  </div>
+	      	  </div>
+	      </div>
+	 </div>
+
+   
+	</div>
+
+	<div class="addWindow row">
+		<div class="addBlock col-xs-10 col-sm-6" style="margin-left:20%">
+			<div class="add-close"></div>
+			<div class="add-title">添加设备</div>
+			<div class="add-main-content">
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">设备名称：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">设备报装容量：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">电网公司编号：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">设备类型：</label>
+						<br>
+						<select class="select_gallery-multiple" style="width:202px;height:30px;overflow:hidden;margin-left:10px">  
+	                                      <optgroup >  
+	                                      		<option value="0"></option> 
+	                                          <option value="0">照明设备</option>  
+	                                          <option value="01">空调与通风设备(制冷)</option>  
+	                                          <option value="02">动力设备(吊车/搅拌机/水泵/风机/电梯等)</option>  
+	                                          <option value="03">水暖设备(热水器等)</option>  
+	                                           <option value="04">其他设备</option>  
+	                                            
+	                                      </optgroup>  
+	                                     
+	                     </select> 	
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">需求响应措施：</label>
+						<br>
+						<select class="select_gallery-multiple" multiple="multiple" style="width:202px;height:30px;overflow:hidden;margin-left:10px">  
+	                                      <optgroup >  
+	                                          <option value="0">分时电价</option>  
+	                                          <option value="01">实时电价</option>  
+	                                          <option value="02">尖峰电价</option>  
+	                                          <option value="03">需求侧电价</option>  
+	                                           <option value="04">直接负荷控制</option>  
+	                                          <option value="05">可中断负荷</option> 
+	                                          <option value="06">紧急需求响应</option>  
+	                                          <option value="07">容量/辅助服务计划</option>   
+	                                      </optgroup>  
+	                                     
+	                     </select> 
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">需求响应类型：</label>
+						<br>
+						<select class="select_gallery-multiple" multiple="multiple" style="width:202px;height:30px;overflow:hidden;margin-left:10px">  
+	                                      <optgroup >  
+	                                          <option value="0">基于电价</option>  
+	                                          <option value="01">基于激励</option>  
+	                                           
+	                                      </optgroup>  
+	                                     
+	                     </select> 
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">设备领域：</label>
+						<br>
+						<select class="select_gallery-multiple" style="width:202px;height:30px;overflow:hidden;margin-left:10px">  
+	                                      <optgroup > 
+	                                       	  <option ></option> 
+	                                          <option value="0">居民生活用电设备</option>  
+	                                          <option value="01">大工业用电设备</option>  
+	                                          <option value="02">一般工商业用电设备</option>  
+	                                          <option value="03">非工业用电</option>  
+	                                           <option value="04">农业生产用电设备</option>  
+	                                            
+	                                      </optgroup>  
+	                                     
+	                     </select> 	
+						
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">可调节负荷：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">提前通知时间：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+				</div>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<input type="checkbox">	<label for="">是否智能设备</label>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<input type="checkbox">	<label for="">是否自动参加需求响应</label>
+					</div>
+				</div>
+				<div class="row" style="margin-bottom:5px">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">通信类型：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">通信地址：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">通信端口：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<label for="">协议类型：</label>
+						<br>
+						<div class="add-input-block">
+							<input type="text" class="add-input">
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="text-align:center;margin-top:15px;">
+						<input type="checkbox">	<label for="">协议是否加密</label>
+					</div>
+				</div>
+				
+			</div>
+			<div class="add-foot">
+				<button class="btn btn-success" style="float:right;margin-right:50px;">保存</button>
+				<button class="btn btn-default" style="float:right">取消</button>
+				<div style="clear:both"></div>
+			</div>
+		</div>
+	</div>
+    <script src='js/select2.min.js'></script>
+    <script type="text/javascript">
+    	$('.btn2').on('click',function(){
+    	
+    		$('.secondDiv').css({
+    			display:'block'
+    		})
+    		$('.firstDiv').css({
+    			display:'none'
+    		});
+    	})
+    	$('.btn1').on('click',function(){
+    	
+    		$('.secondDiv').css({
+    			display:'none'
+    		})
+    		$('.firstDiv').css({
+    			display:'block'
+    		});
+    	})
+
+    	$(".select_gallery-multiple").select2({
+    		minimumResultsForSearch: -1,
+    		
+    	}); 
+    	$('.add-close').on('click',function(){
+    		$('.addWindow').css({
+    			display:'none'
+    		})
+    	})
+    	$('.windowBtn').on('click',function(){
+    		$('.addWindow').css({
+    			display:'block'
+    		})
+    	})
+    	// table框对勾
+    	$('.data-check').on('change',function(){
+				
+				if($('.data-check').is(':checked')){
+					
+					$("input[type='checkbox']").prop('checked',true);
+					
+					
+				}else{
+					$("input[type='checkbox']").prop('checked',false);
+				}
+
+				 
+			});
+
+    	// 保存成功按钮
+    	$('.btn-success').on('click',function(){
+    			$('.addWindow').css({
+    			display:'none'
+    		})
+    	})
+    	//保存失败按钮
+    	$('.btn-default').on('click',function(){
+    			$('.addWindow').css({
+    			display:'none'
+    		})
+    	})
+    </script>
+</body>
+</html>

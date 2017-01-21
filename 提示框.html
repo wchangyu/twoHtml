@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = 'utf-8'>
+	<title>提示框</title>
+	 <!-- 包含头部信息用于适应不同设备 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/animate.min.css">
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+      <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
+    <script src="https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+	<script src="js/swiper.animate1.0.2.min.js"></script>
+	<script src="js/swiper-3.4.1.min.js"></script>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		.content{
+				
+			    background-color: #006699;
+    			color: white;
+    			border-color: rgb(255, 178, 63);
+    			float: right;
+    			margin-top:0.625em;
+    			width:310px;
+    			min-height: 65px;
+    			position: relative;
+				display:none;
+		}
+		.main{
+			margin-right: 0;
+		}
+		.windowTitle{
+			margin-left: 10px;
+		}
+		.closeWindow{
+			    background-color: #ffb23f;
+   				color: white;
+   				position: absolute;
+			    padding: 0 0.25em;
+			    cursor: pointer;
+			    top: 0;
+			  	right:0;
+
+		}
+		.windows{
+			position:absolute;
+		
+		}
+		select{
+			font-size:14px;
+			padding:10px;
+		}
+		.bottomBtn button{
+			color: #fff;
+			background-color: #5bc0de;
+			border-color: #46b8da;
+			padding: 5px 10px;
+			font-size: 12px;
+			line-height: 1.5;
+			display: inline-block;
+			font-weight: 400;
+			text-align: center;
+			white-space: nowrap;
+			vertical-align: middle;
+			touch-action: manipulation;
+			cursor: pointer;
+			width: 60px;
+			float:right;
+			margin-bottom:10px;
+			border: 1px solid transparent;
+			border-radius: 4px;
+			margin-right:5px;
+		}
+		.bottomBtn button:hover{
+			background: #39f;
+		    color: #fff;
+		    text-shadow: none;
+		}
+		.texts{
+			width:100%;
+			min-height:50px;
+			margin-bottom:10px;
+		}
+		.row{
+			margin-left:0;
+			margin-right:0;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="swiper-container windows">
+		<div class="swiper-wrapper">
+			<div class="main swiper-slide">
+				<div class='content ani' swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+					<h5 class="windowTitle">Inspired by Windows 8 notifications</h5>
+					<div class="closeWindow">
+						<span>X</span>
+					</div>
+					<div class="texts">
+
+					</div>
+					<div class="bottomBtn">
+						<button>取消</button>
+						<button>确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div style="position: absolute;left:20px;top:300px;width:300px;height:200px">
+		<select name="" id="" class="selLeft">
+			
+			<option>center</option>
+			<option>right</option>
+		</select>
+		
+		<button class="btn">弹出提示框</button>
+	</div>
+
+
+	<script type="text/javascript">
+		var isTrue = false;
+
+		$('.closeWindow').on('click',function(){
+			$('.content').hide();
+			isTrue = false;
+		});
+
+		$('.btn').on('click',function () {
+			if(isTrue){
+				return 0 ;
+			}
+            var p1 = $('.selLeft').val();
+        
+           if(p1 == 'right'){
+               $('.ani').removeClass('bounceInDown');
+               $('.ani').attr('swiper-animate-effect','bounceInRight')
+                $('.windows').css({
+					left:'',
+                    right:0,
+                    top:'20px',
+					bottom:'',
+					marginLeft:'',
+                    marginTop:''
+                })
+			}else if(p1 == 'center'){
+               $('.ani').removeClass('bounceInRight');
+               $('.ani').attr('swiper-animate-effect','bounceInDown');
+                $('.windows').css({
+                    right:'',
+                    left:'50%',
+                    top:'',
+                    bottom:'50%',
+                    marginLeft:'-155px',
+                    marginTop:'-100px'
+
+                })
+            }
+
+		    $('.content').show();
+            var mySwiper = new Swiper ('.swiper-container', {
+                onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+                    swiperAnimateCache(swiper); //隐藏动画元素
+                    swiperAnimate(swiper); //初始化完成开始动画
+                },
+                onSlideChangeEnd: function(swiper){
+                    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+                }
+            })
+            isTrue = true;
+        })
+	</script>
+</body>
+</html>

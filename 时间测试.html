@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 包含 bootstrap 样式表 -->
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.standalone.css">
+     <link rel="stylesheet" type="text/css" href="css/select2.css">
+     <link rel="stylesheet" type="text/css" href="css/assess.css">
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+	 <label class="theTime">创建时间：</label>
+      <input class="chooseDate chooses input1" type="text" id='datePicker' placeholder='选择时间'>
+                                     
+                                    
+     <label class="theTime" style="margin-left:0">-</label>
+     <input class="chooseDate chooses input2" type="text" id='datePicker' placeholder='选择时间'>
+
+	 <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <!-- 可选: 合并了 Bootstrap JavaScript 插件 -->
+    <script src="https://apps.bdimg.com/libs/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src='js/select2.min.js'></script>
+    <script type="text/javascript">
+	    $('.chooses').datepicker(
+	           {
+	             startView: 1, 
+			        maxViewMode: 1,
+			        minViewMode:1,
+			        format: "yyyy-mm",//选择日期后，文本框显示的日期格式
+			        language: "zh-CN" //汉化
+	           }
+	        )
+	   var num = 0;
+    	$('.input1').on('click',function(){
+    		// 删除绑定过的事件
+    		 $('.datepicker-months .prev').off('click');
+    		 $('.datepicker-months .next').off('click');
+    		 // 重新进行事件绑定
+    		$('.datepicker-months .prev').on('click',function() {
+	    		// // body...
+	    		num++;
+	    		console.log(num);
+	    		var string = $('.input1').val();
+		    		var year = string.split('-')[0] - 1;
+		    		var month = string.split('-')[1];
+		    		$('.input1').val(year + "-" + month);
+	    		
+	    	});
+	    	$('.datepicker-months .next').on('click',function() {
+	    		// // body...
+	    		var string = $('.input1').val();
+		    		var year = parseInt(string.split('-')[0]) + 1;
+		    		var month = string.split('-')[1];
+		    		$('.input1').val(year + "-" + month);
+	    		
+	    	})
+    	})
+    	
+    	$('.input2').on('click',function(){
+    		// 删除绑定过的事件
+    		 $('.datepicker-months .prev').off('click');
+    		 $('.datepicker-months .next').off('click');
+    		 // 重新进行事件绑定
+    		$('.datepicker-months .prev').on('click',function() {
+	    		// // body...
+	    		var string = $('.input2').val();
+		    		var year = string.split('-')[0] - 1;
+		    		var month = string.split('-')[1];
+		    		$('.input2').val(year + "-" + month);
+	    		
+	    	});
+	    	$('.datepicker-months .next').on('click',function() {
+	    		// // body...
+	    		var string = $('.input2').val();
+		    		var year = parseInt(string.split('-')[0]) + 1;
+		    		var month = string.split('-')[1];
+		    		$('.input2').val(year + "-" + month);
+	    		
+	    	})
+    	})
+    </script>
+</body>
+</html>

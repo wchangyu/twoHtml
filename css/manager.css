@@ -1,0 +1,98 @@
+		*{
+			font-family: 微软雅黑;
+		}
+		.addBlock{
+			border-radius: 4px 4px 0 0 !important;
+			background: #fafafa;
+		/*	width: 60%;*/
+			margin:0 auto;
+		}
+		.add-close{
+			width: 20px;
+			height: 20px;
+			float: right;
+			margin-right: 20px;
+			background: url(../img/close.png) no-repeat;
+			background-size: 15px;
+			cursor: pointer;
+			background-position: center;
+			opacity: 0.5;
+			margin-top: 20px;
+		}
+		.add-close:hover{
+			opacity: 1;
+		}
+		.add-title{
+			font-size: 26px;
+			line-height: 50px;
+			padding: 20px;
+			padding-top: 25px;	
+			border-bottom: 1px solid #ddd;
+		}
+		.add-main-content{
+			background: white;
+			
+		}
+		.add-input-block{
+			width: 202px;
+			
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			display: inline-block;
+			padding: 0 5px 0 5px;
+		}
+		.add-input{
+			width: 190px;
+			border-radius: 5px;
+			border: none;
+			outline: none;
+			line-height: 30px;
+			height: 30px;
+		}
+		.add-input-father{
+			width: 202px;
+			position: relative;
+			display: inline-block;
+		}
+		.row{
+			margin: 0;
+		}
+		.add-select-block{
+			margin: 0;
+			padding: 0;
+			width: 202px;
+			padding: 0 5px 0 5px;
+			position: absolute;
+			border: 1px solid #ccc;
+			border-bottom-left-radius: 5px !important;
+			border-bottom-right-radius: 5px !important;
+			background: white;
+			display: none; 
+			top: 29px;
+			z-index: 100;
+		}
+		.add-select-block li{
+			list-style: none;
+			line-height: 30px;
+			cursor: pointer;
+		}
+		.add-content{
+			float: left;
+			width:80%;
+		}
+		.add-input-arrow{
+			width: 10px;
+			height: 10px;
+			background:url('../img/down-arrow.png') no-repeat;
+			background-size:10px;
+			background-position:95% center;
+			float: right;
+			margin-top: 10px;
+		}
+		.add-foot{
+			padding: 20px 0 20px 0;
+			border-top: 1px solid #ddd;
+		}
+		.add-main-content{
+			padding-bottom: 0px;
+		}

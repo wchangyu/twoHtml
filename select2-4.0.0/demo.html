@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+<title>select2实例</title>
+<link rel="stylesheet" href="bootstrap/3.3.0/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="select2-4.0.0/dist/css/select2.min.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="select2-4.0.0/dist/js/select2.min.js"></script>
+
+</head>
+<body>
+	<label class="control-label col-sm-1">个性标签（checkbox）: </label>
+	<div class="col-sm-3">
+		<select class="select_gallery-multiple" multiple="multiple" style="width:100%;">
+			<optgroup label="这样真的好么？">
+				<option value="0">打野</option>
+				<option value="01">上单</option>
+				<option value="02">中单</option>
+				<option value="03">送人头</option>
+			</optgroup>
+			<optgroup label="职位">
+				<option value="1">土豪</option>
+				<option value="2">屌丝</option>
+				<option value="3">单身dog</option>
+				<option value="4">苹果粉</option>
+				<option value="5">苦逼程序员</option>
+			</optgroup>
+		</select>
+	</div>
+	
+	<label class="control-label col-sm-1">个性标签（radio）: </label>
+	<div class="col-sm-3">
+		<select class="select_gallery" style="width:100%;">
+			<optgroup label="这样真的好么？">
+				<option value="0">打野</option>
+				<option value="01">上单</option>
+				<option value="02">中单</option>
+				<option value="03">送人头</option>
+			</optgroup>
+			<optgroup label="职位">
+				<option value="1">土豪</option>
+				<option value="2">屌丝</option>
+				<option value="3">单身dog</option>
+				<option value="4">苹果粉</option>
+				<option value="5">苦逼程序员</option>
+			</optgroup>
+		</select>
+	</div>
+	<script type="text/javascript">
+		$(".select_gallery-multiple").select2();
+		$(".select_gallery").select2();
+	</script>
+</body>
+</html>

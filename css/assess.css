@@ -1,0 +1,181 @@
+ *{
+        margin:0;
+        padding:0;
+      }
+      .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+          font-family: inherit;
+          font-weight: 500;
+          line-height: 1.1;
+          color: inherit;
+      }
+      .main{
+        width:100%;
+        padding-left: 20px;
+        min-height: 543px;
+        background-color: #ecf0f5;
+        z-index: 800;
+        box-sizing:border-box;
+      }
+      .main h4{
+        font-size:18px;
+        margin-bottom: 10px;
+      }
+      
+     
+      .row{
+        margin:0;
+        padding:0;
+      }
+      .info-box{
+            display: block;
+            min-height: 63px;
+            background: #fff;
+            width: 100%;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+            margin-bottom: 15px;
+
+      }
+      .box1{
+        background:url(../img/first.png) no-repeat white;
+      }
+      .box2{
+        background:url(../img/second.png) no-repeat white;
+      }
+      .box3{
+        background:url(../img/three.png) no-repeat white;
+      }
+      .box4{
+        background:url(../img/four.png) no-repeat white;
+      }
+      .infoText{
+        display: block;
+        font-size: 14px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-left:100px;
+      }
+      .infoNum{
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-left:100px;
+      }
+      .box{
+       
+        position: relative;
+        border-radius: 3px;
+        background: #ffffff;
+        border-top: 3px solid #3c8dbc;
+        margin-bottom: 20px;
+        width: 100%;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+      }
+      .boxTitle{
+          width:100%;
+          height:20px;
+          font-size:18px;
+          background:url(../img/rightTitle.png) no-repeat 6px 0px;
+          padding-left:30px; 
+          margin:0;
+          box-sizing:border-box;
+          margin-bottom: 20px;
+      }
+
+      label {
+          display: inline-block;
+          max-width: 100%;
+          margin-bottom: 5px;
+          font-weight: 700;
+      }
+      .theTime{
+        margin-left: 15px;
+      }
+      .chooseDate{
+        position: relative;
+        padding: 6px 9px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-shadow: inset 0 1px 3px #e3e3e3;
+        border-radius: 4px;
+        line-height: normal;
+        box-sizing: border-box;
+        background-color: #fff;
+        vertical-align: middle;
+        outline: 0;
+        width: 120px;
+        height:30px;
+        background:url(../img/times.png) no-repeat 90px center;
+        cursor: pointer;
+      }
+      .chooseDate span{
+        color:#aaa;
+      }
+      .chooseOther{
+        background:none;
+        width:150px;
+      }
+      .smallBtn{
+        float:right;
+        margin-right: 15px;
+      }
+      .smallBtn span{
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-left: -1px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 7px;
+            line-height: 14px;
+            min-width: 30px;
+            min-height: 30px;
+            margin-bottom: 5px;
+
+      }
+      .smallBtn span:nth-child(1){
+        border-radius: 5px 0  0 5px; 
+        background:url(../img/left.png) no-repeat center center;
+      }
+      .smallBtn span:nth-child(2){
+        border-radius: 0 5px 5px 0; 
+        background:url(../img/right.png) no-repeat center center;
+      }
+      .pageHeader{
+            padding-bottom: 9px;
+            margin: 40px 0 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 22px;
+            position: relative;
+            
+      }
+      .pageHeader .leftPic{
+        width:30px;
+        height:30px;
+        background:url(../img/ball.png) no-repeat;
+        display: inline-block;
+        position: absolute;
+        top:-20px;
+      }
+      .pageHeader .rightWord{
+        position: absolute;
+        font-weight: 400;
+        left:90%;
+        top:-20px;
+        font-size: 14px;
+        color:#666;
+        display: inline-block;
+        width:98px;
+      }
+      .text-right{
+        text-align: right;
+        font-weight: 700;
+      }
+      .text-left{
+        text-align:left;
+        font-size:200;
+      }

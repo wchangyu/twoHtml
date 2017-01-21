@@ -1,0 +1,251 @@
+	 .main{
+	        width:100%;
+	       
+	        min-height: 543px;
+	        background-color: #ecf0f5;
+	        z-index: 800;
+	        box-sizing:border-box;
+	      }
+	      .main h4{
+		        font-size:18px;
+		        margin-bottom: 10px;
+		        margin-left:20px;
+
+		  }
+		  .catalog{
+		  	float:right;
+		  	margin-right: 20px;
+		  	font-size:12px;
+		  	color:#444;
+		  	padding-left: 20px;
+		  	display: inline-block;
+		  	background: url(../img/diqiu.png) no-repeat;
+		  }
+		  .catalog b{
+		  	font-weight: 200;
+		  }
+		  b span{
+		  	color:#aaa;
+		  }
+		  .catalog a{
+		  	text-decoration: none;
+		  	color:#444;
+		  }
+		  .content{
+		  	min-height: 250px;
+		    padding: 15px;
+		    margin-right: auto;
+		    margin-left: auto;
+		    padding-left: 15px;
+		    padding-right: 15px;
+		  }
+		  label{
+		  		display: inline-block;
+			    max-width: 100%;
+			    margin-bottom: 5px;
+			    font-weight: 700;
+		  }
+		  .theInput {
+			    position: relative;
+			    padding: 6px 9px;
+			    display: inline-block;
+			    border: 1px solid #ccc;
+			    box-shadow: inset 0 1px 3px #e3e3e3;
+			    border-radius: 4px;
+			    line-height: normal;
+			    box-sizing: border-box;
+			    background-color: #fff;
+			    vertical-align: middle;
+			    outline: 0;
+			}
+			.clickInput{
+				position: relative;
+			    min-width: 100px;
+			    cursor: pointer;
+			}
+			.row {
+			    margin-bottom: 20px;
+			}
+			.btn{
+				color: #fff;
+			    background-color: #5bc0de;
+			    border-color: #46b8da;
+			    padding: 5px 10px;
+    			font-size: 12px;
+    			line-height: 1.5;
+    			display: inline-block;
+			
+			    margin-bottom: 0;
+			   
+			    font-weight: 400;
+			   
+			    text-align: center;
+			    white-space: nowrap;
+			    vertical-align: middle;
+			   
+			    touch-action: manipulation;
+			    cursor: pointer;
+			    width:60px;
+			}
+			.btn:hover{
+				 background: #39f;
+    			color: #fff;
+   				 text-shadow: none;
+			}
+			.btnRight{
+				height: 34px;
+				width:39px;
+				border-radius: 0;
+				float: right;
+			}
+			.btn1{
+				background:url(../img/btn2.png) no-repeat center center #5bc0de;
+			}
+			.btn2{
+				background:url(../img/btn1.png) no-repeat center center #5bc0de;
+			}
+			.btn1:hover{
+				background:url(../img/btn2.png) no-repeat center center #39f;
+			}
+			.btn2:hover{
+				background:url(../img/btn1.png) no-repeat center center #39f;
+			}
+			.box{
+				border-top: 0;
+				border: none;
+   				position: relative;
+			    border-radius: 3px;
+			    background: #ffffff;
+			    margin-bottom: 20px;
+			    width: 100%;
+			    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+			}
+			.boxHeader{
+				padding: 20px;
+			    height: 120px;
+			    border-top-right-radius: 3px;
+			    border-top-left-radius: 3px;
+			    background-color: #00a7d0 !important;
+			    color: #fff !important;
+			    border: 0 none;
+			}
+			.boxTitle{
+				    margin-top: 0;
+				    margin-bottom: 5px;
+				    font-size: 25px;
+				    font-weight: 300;
+				    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+				    margin-top: 0;
+			}
+			.boxText{
+				font-size:14px;
+				margin-top: 0;
+			}
+			.boxImg{
+				position: absolute;
+			    top: 65px;
+			    left: 50%;
+			    margin-left: -45px;
+			}
+			.imgBox{
+				border-radius: 50%;
+				
+				display: block;
+			    float: left;
+			    width: 90px;
+			    height: 64px;
+			    margin-bottom: 5px;
+			    text-align: center;
+			    font-size: 45px;
+			    background: rgba(0, 0, 0, 0.2);
+			    background:url(../img/snow.png) no-repeat center center #00a7d0;
+			}
+			.boxFooter{
+				    padding-top: 30px;
+				    border-top-left-radius: 0;
+				    border-top-right-radius: 0;
+				    border-bottom-right-radius: 3px;
+				    border-bottom-left-radius: 3px;
+				    border-top: 1px solid #f4f4f4;
+				    padding: 10px;
+				    background-color: #ffffff;
+			}
+			.theDatas{
+				    display: block;
+				    margin: 10px 0;
+				    text-align: center;
+			}
+			.datasHeader{
+				    margin: 0;
+				    padding: 0;
+				    font-weight: 600;
+				    font-size: 16px;
+			}
+			.dataText{
+				    text-transform: uppercase;
+			}
+			.lightImg{
+				 background:url(../img/light.png) no-repeat center center #00a7d0;
+			}
+		
+			.tableBody{
+				width: 100%;
+				 border-collapse: collapse;
+			    border-spacing: 0;
+			    empty-cells: show;
+			    background-color: transparent;
+			}
+			.tableBody tr{
+				    border-bottom: 1px solid #ddd;
+			}
+			
+			.tableBody th,td{
+				    box-sizing: border-box;
+    				padding: .5em 1em;
+			}
+			.tableBody table th {
+			    text-align: left;
+			    border-width: 0;
+			    position: relative;
+
+			}
+		input[type=checkbox] {
+		   
+		    appearance: none;
+		    width: 13px;
+		    height: 13px;
+		    background: #fff;
+		    border: 1px solid #dcdcdc;
+		    border-radius: 3px;
+		    position: relative;
+		    vertical-align: middle;
+		    line-height: 1;
+		    outline: 0;
+		    box-sizing: border-box;
+		}
+
+		.tableBody table .td-checkbox {
+		    width: 13px;
+		}
+
+		.tableBody tbody tr:nth-of-type(odd) {
+		    background-color: #f9f9f9;
+		}
+		.tableBody td,th{
+			border:1px #ddd solid;
+		}
+		.secondDiv{
+			display: none;
+		}
+		.addWindow{
+			display: none;
+   			overflow-y: auto;
+   			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 1010;
+			background: rgba(0,0,0,.6);
+			transform: translateZ(0);
+		}
