@@ -160,6 +160,7 @@
 
 </head>
 <body>
+<div></div>
 <div class="form-list">
     <form method="post" action="#" id="J_InfoForm">
         <input name="_tb_token_" type="hidden" value="mtohjfGHq">
@@ -167,7 +168,7 @@
         <div class="form-group">
             <div class="form-item">
                 <span class="form-label form-label-b tsl" data-phase-id="r_p_loginName">登录名</span>
-                15910897457
+                王常宇
             </div>
         </div>
         <div class="form-group">
@@ -179,9 +180,9 @@
                 <span class="form-label tsl" data-phase-id="r_p_password">登录密码</span>
                 <input class="form-text set-password" id="J_Password" name="pwd" type="password" placeholder="设置你的登录密码" data-inner_placeholder="r_p_input_enterPassword" value="">
 
-                <span class="hooks"></span>
-                <span class="marks"></span>
-                <span class="hint-text"></span>
+                <span class="hooks hooks1"></span>
+                <span class="marks marks1"></span>
+                <span class="hint-text hint-text1"></span>
             </div>
 
             <div class="form-item">
@@ -192,11 +193,14 @@
         </div>
         <div class="form-group">
             <div class="form-item">
-                <span class="form-label form-label-b tsl" data-phase-id="r_ui_enterUserNameTip">设置会员名</span>
+                <span class="form-label form-label-b tsl" data-phase-id="r_ui_enterUserNameTip">设置手机号</span>
             </div>
             <div class="form-item">
-                <span class="form-label tsl" data-phase-id="r_p_userName">登录名</span>
-                <input class="form-text err-input" id="J_Nick" name="nick" autocomplete="off" type="text" placeholder="会员名一旦设置成功，无法修改" data-inner_placeholder="r_p_input_enterUserName" data-outer_placeholder="r_p_tip_enterUserName" value="">
+                <span class="form-label tsl" data-phase-id="r_p_userName">手机号</span>
+                <input class="form-text err-input" id="J_Nick" name="nick" autocomplete="off" type="text" placeholder="手机号一旦设置成功，无法修改" data-inner_placeholder="r_p_input_enterUserName" data-outer_placeholder="r_p_tip_enterUserName" value="">
+                <span class="hooks hooks2"></span>
+                <span class="marks marks2"></span>
+                <span class="hint-text hint-text2"></span>
                 <div class="nick-suggest-container">
                     <div class="nick-suggest" id="J_NickSuggest"></div>
                 </div>
@@ -243,13 +247,13 @@
             $('.pw-tip').css({
                 display:'block'
             });
-            $('.hooks').css({
+            $('.hooks1').css({
                 display:'none'
             });
-            $('.marks').css({
+            $('.marks1').css({
                 display:'none'
             })
-            $('.hint-text').css({
+            $('.hint-text1').css({
                 display:'none'
             })
         });
@@ -262,26 +266,65 @@
         });
         function checkPassword(password)
         {
-            $('.hint-text').css({
+            $('.hint-text1').css({
                 display:'inline-block'
             })
             var reg=/^[A-Za-z]+[0-9]+[A-Za-z0-9]*|[0-9]+[A-Za-z]+[A-Za-z0-9]*$/g;
             if(!reg.test(password))
             {
-                $('.marks').css({
+                $('.marks1').css({
                     display:'inline-block'
                 });
-                $('.hint-text').html('密码设置不符合要求');
-                $('.hint-text').css({
+                $('.hint-text1').html('密码设置不符合要求');
+                $('.hint-text1').css({
                     color:'#c40000'
                 })
                 return false;
             }else{
-                $('.hooks').css({
+                $('.hooks1').css({
                     display:'inline-block'
                 });
-                $('.hint-text').html('密码格式正确');
-                $('.hint-text').css({
+                $('.hint-text1').html('密码格式正确');
+                $('.hint-text1').css({
+                    color:'#6bc827'
+                })
+            }
+            return true;
+        }
+        $('#J_Nick').on('focus',function(){
+            $('.hooks2').css({
+                display:'none'
+            });
+            $('.marks2').css({
+                display:'none'
+            })
+            $('.hint-text2').css({
+                display:'none'
+            })
+        })
+        $('#J_Nick').on('blur',function(){
+            checkPhone();
+        })
+        function checkPhone(){
+            var phone = document.getElementById('J_Nick').value;
+            $('.hint-text2').css({
+                display:'inline-block'
+            })
+            if(!(/^1(3|4|5|7|8)\d{9}$/.test(phone))){
+                $('.marks2').css({
+                    display:'inline-block'
+                });
+                $('.hint-text2').html('手机号填写错误');
+                $('.hint-text2').css({
+                    color:'#c40000'
+                })
+                return false;
+            }else{
+                $('.hooks2').css({
+                    display:'inline-block'
+                });
+                $('.hint-text2').html('手机号填写正确');
+                $('.hint-text2').css({
                     color:'#6bc827'
                 })
             }
